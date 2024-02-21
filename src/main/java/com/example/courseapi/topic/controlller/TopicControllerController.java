@@ -30,6 +30,10 @@ public class TopicControllerController implements TopicControllerApi {
         return topicService.addTopic(id, topic);
     }
 
+    public String updateTopic(@PathVariable String id, @RequestBody Topic topic){
+        return topicService.updateTopic(id,topic);
+    }
+
     public String deleteTopic(@PathVariable String id){
         return topicService.deleteTopic(id);
     }

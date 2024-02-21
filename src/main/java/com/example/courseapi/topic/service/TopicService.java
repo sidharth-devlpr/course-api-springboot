@@ -36,4 +36,9 @@ public class TopicService {
         topicRepository.deleteById(id);
         return "deleted";
     }
+
+    public String updateTopic(String id, Topic topic) {
+        topicRepository.save(topic);
+        return "updated topic id: "+id;
+    }
 }
