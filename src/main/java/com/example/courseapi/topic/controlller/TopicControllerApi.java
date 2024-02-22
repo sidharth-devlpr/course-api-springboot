@@ -10,7 +10,7 @@ public interface TopicControllerApi {
     public List<Topic> getAllTopics();
 
     @GetMapping("/topics/{id}")
-    public String getTopicById(@PathVariable String id);
+    public Topic getTopicById(@PathVariable String id);
 
     @PostMapping("/topics/{id}")
     public String addTopic(@PathVariable String id, @RequestBody Topic topic);

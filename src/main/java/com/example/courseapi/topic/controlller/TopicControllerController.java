@@ -21,7 +21,7 @@ public class TopicControllerController implements TopicControllerApi {
     }
 
     @Override
-    public String getTopicById(@PathVariable String id){
+    public Topic getTopicById(@PathVariable String id){
         return topicService.getTopicById(id);
     }
 
