@@ -21,13 +21,17 @@ public class TopicControllerController implements TopicControllerApi {
     }
 
     @Override
-    public String getTopicById(@PathVariable String id){
+    public Topic getTopicById(@PathVariable String id){
         return topicService.getTopicById(id);
     }
 
     @Override
     public String addTopic(@PathVariable String id, @RequestBody Topic topic){
         return topicService.addTopic(id, topic);
+    }
+
+    public String updateTopic(@PathVariable String id, @RequestBody Topic topic){
+        return topicService.updateTopic(id,topic);
     }
 
     public String deleteTopic(@PathVariable String id){
