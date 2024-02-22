@@ -3,6 +3,7 @@ package com.example.courseapi.course.domain;
 import com.example.courseapi.topic.domain.Topic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -12,7 +13,8 @@ public class Course {
     private String name;
     private String description;
 
-    private Topic Topic;
+    @ManyToOne
+    private Topic topic;
 
     public String getId() {
         return id;
@@ -41,10 +43,14 @@ public class Course {
     public Course() {
     }
 
-    public Course(String id, String name, String description, String topicid) {
+    public Course(String id, String name, String description, String topicId) {
         this.id = id;
         this.name = name;
         this.description = description;
-        Topic topic = new Topic(topicid, "", "");
+        this.topic = new Topic(topicId,"","");
+    }
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 }

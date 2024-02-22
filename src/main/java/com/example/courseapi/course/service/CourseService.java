@@ -33,14 +33,14 @@ public class CourseService {
 //        return courseRepository.findById(id);
     }
 
-    public String addCourse(String id, Course course) {
+    public String addCourse(Course course) {
         courseRepository.save(course);
         return "topic added";
     }
 
-    public String updateCourse(String id, Course course) {
+    public String updateCourse(Course course) {
         courseRepository.save(course);
-        return "updated topic id: "+id;
+        return "updated topic id: ";
     }
 
     public String deleteCourse(String id) {

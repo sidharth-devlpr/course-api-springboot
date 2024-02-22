@@ -12,11 +12,11 @@ public interface CourseControllerApi {
     @GetMapping("/topics/{topicId}/courses/{id}")
     public Course getCourseById(@PathVariable String id);
 
-    @PostMapping("/topics/{topicId}/courses/{id}")
-    public String addCourse(@PathVariable String id, @RequestBody Course topic);
+    @PostMapping("/topics/{topicId}/courses")
+    public String addCourse(@PathVariable String topicId, @RequestBody Course topic);
 
     @PutMapping("/topics/{topicId}/courses/{id}")
-    public String updateCourse(@PathVariable String id, @RequestBody Course topic);
+    public String updateCourse(@PathVariable String topicId, @RequestBody Course topic);
 
     @DeleteMapping("/topics/{topicId}/courses/{id}")
     public String deleteCourse(@PathVariable String id);
