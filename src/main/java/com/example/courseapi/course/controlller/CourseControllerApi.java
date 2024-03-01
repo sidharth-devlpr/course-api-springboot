@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 public interface CourseControllerApi {
-    @GetMapping("/topics/courses")
-    public List<Course> getAllCourses();
+    @GetMapping("/topics/{topicId}/courses")
+    public List<Course> getAllCourses(@PathVariable String topicId);
 
     @GetMapping("/topics/{topicId}/courses/{id}")
     public Course getCourseById(@PathVariable String id);

@@ -50,6 +50,10 @@ public class Course {
         this.topic = new Topic(topicId,"","");
     }
 
+    public Topic getTopic() {
+        return topic;
+    }
+
     public void setTopic(Topic topic) {
         this.topic = topic;
     }

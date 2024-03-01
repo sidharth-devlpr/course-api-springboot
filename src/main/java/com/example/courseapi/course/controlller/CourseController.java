@@ -16,8 +16,8 @@ public class CourseController implements CourseControllerApi {
     private CourseService courseService;
 
     @Override
-    public List<Course> getAllCourses(){
-        return courseService.getAll();
+    public List<Course> getAllCourses(@PathVariable String topicId ){
+        return courseService.getAll(topicId);
     }
 
     @Override
